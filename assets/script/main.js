@@ -23,6 +23,14 @@ const app = {
       overplay.classList.remove("enable");
       headerMobile.classList.remove("enable");
     };
+
+    overplay.onclick = function () {
+      overplay.classList.add("disable");
+      headerMobile.classList.add("disable");
+
+      overplay.classList.remove("enable");
+      headerMobile.classList.remove("enable");
+    };
   },
   start: function () {
     this.handleEvents();
