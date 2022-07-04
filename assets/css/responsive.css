@@ -24,6 +24,9 @@
 }
 
 @media (max-width: 1023px) {
+  .home-img {
+    width: 100%;
+  }
   .svg-brand,
   .svg-brand2 {
     display: none;
@@ -59,6 +62,9 @@
   }
   .service-menu__row:first-child {
     margin-right: 50px;
+  }
+  .home-img img {
+    object-fit: cover;
   }
   .service-menu__row:last-child {
     margin-left: 50px;
@@ -127,16 +133,32 @@
   :root {
     --width-products: calc(100% / 2 - 15px);
   }
+  .home-header h1 {
+    font-size: 5rem;
+  }
   .header-menu__item:not(.logo) {
     display: none;
   }
   .header-menu__item.logo {
     margin-right: 0;
   }
+  .header-btn__mobile {
+    padding: 5px 20px;
+    font-size: 1.6rem;
+    line-height: 35px;
+  }
   .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+  }
+  .header-menu__icon {
+    position: absolute;
+    left: 0;
+    padding: 0 2rem;
+  }
+  .header-btn {
+    display: none;
   }
   .icon-header {
     font-size: 2.2rem;
@@ -240,9 +262,15 @@
   .footer-language__switch i {
     font-size: 1.2rem;
   } */
+  .header-mobile.enable {
+    width: 50%;
+  }
+  .header-btn__mobile {
+    font-size: 1.8rem;
+  }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 550px) {
   .header-btn {
     margin-left: 0;
   }
@@ -266,15 +294,32 @@
     width: 80%;
     margin-bottom: 30px;
   }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
   .footer-col1 {
-    margin-left: 10px;
-    flex: 0 0 20%;
-    max-width: 20%;
+    margin-bottom: 12px;
   }
   .footer-col2 {
-    margin-right: 0;
-    flex: 0 0 80%;
-    max-width: 80%;
+    display: grid;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-policy {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    line-height: 35px;
+  }
+
+  .footer-language__switch {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .footer-social {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
   }
   .service-name {
     font-size: 2.2rem;
@@ -284,6 +329,15 @@
   :root {
     --width-products: 100%;
   }
+  .products-name {
+    padding: 19px 19px 0;
+  }
+  .products-end {
+    padding: 0 12px 12px 12px;
+  }
+  .header-btn__mobile {
+    font-size: 1rem;
+  }
   .home-header h1 {
     font-size: 4rem;
   }
@@ -291,6 +345,10 @@
     height: 100px;
     width: 105px;
   }
+  .header-mobile__menu {
+    padding: 20px 22px;
+  }
+
   .service-menu {
     display: flex;
     flex-direction: column;
@@ -316,8 +374,10 @@
     width: 80%;
   }
   .home-img {
-    width: 350px;
-    height: 260px;
+    width: 100%;
+  }
+  .home-img img {
+    object-fit: cover;
   }
   .form-firstname,
   .form-lastname,
@@ -331,23 +391,27 @@
     flex-direction: column;
   }
   .footer-col1 {
-    margin-left: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
+    margin-bottom: 12px;
   }
   .footer-col2 {
-    margin-right: 0;
-    flex: 0 0 100%;
-    max-width: 100%;
+    display: grid;
+    align-items: center;
+    gap: 10px;
   }
   .footer-policy {
-    margin-right: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    line-height: 35px;
   }
-  .footer-language__switch a {
-    margin-right: 10px;
-  }
+
   .footer-language__switch {
-    margin-right: 20px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .footer-social {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
   }
 }
 
@@ -359,6 +423,39 @@
   .footer-language__switch a,
   .footer-language__switch i,
   .footer-social {
-    font-size: 1rem;
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 376px) {
+  .general-header {
+    font-size: 3.5rem;
+    margin: 130px 0 40px 0;
+  }
+  .header-mobile.enable {
+    width: 65%;
+  }
+  .header-btn__mobile {
+    font-size: 1.6rem;
+  }
+  .home-header {
+    margin: 60px 0 60px 0;
+  }
+  .home-header h1 {
+    font-size: 3.5rem;
+  }
+  .content-2 {
+    margin-bottom: 40px;
+  }
+  .products-item {
+    margin-bottom: 30px;
+  }
+  .products-list {
+    grid-template-rows: 290px 290px;
+  }
+  label {
+    font-size: 2rem;
+  }
+  .advise-btn {
+    justify-content: center;
   }
 }
